@@ -9,10 +9,10 @@ function getServerDetails(out GameInfo.serverResponseLine serverState) {
     if (kfgt != none) {
         addSD(serverState, "Difficulty", GetDifficultyName(kfgt.GameDifficulty));
         addSD(serverState, "GameType", GetAbbrevGameType(kfgt.Acronym));
-        //addSD(serverState, "VotingOption", GetMyVotingOption(kfgt.MapListType));
+        addSD(serverState, "VotingOption", GetMyVotingOption(kfgt.MapListType));
         //addSD(serverState, "CurrentMap", GetCurrentMap(kfgt.MapName));
         //addSD(serverState, "FakedPlayers", GetFakedPlayers(kfgt.MaxPlayers));
-        //addSD(serverState, "BotCount", (NumBots));
+        addSD(serverState, "BotCount", GetBotCount(kfgt.NumBots));
     }
 }
 
@@ -32,12 +32,13 @@ private final function string GetDifficultyName(float GameDifficulty) {
             return "UNKNOWN DIFFICULTY";
     }
 }
+// Abbreviated Game Type - Can Easily Declare with KFMapVoteV2+
 private final function string GetAbbrevGameType(string Acronym) {  
     return Acronym;
 }
 
-private final function string GetCurrentMap(string MapName) {
-    /*local int DashIndex;
+/*private final function string GetCurrentMap(string MapName) {
+    local int DashIndex;
     
     // Find the first dash
     DashIndex = InStr(MapName, "-");
@@ -45,11 +46,11 @@ private final function string GetCurrentMap(string MapName) {
     // If found at position 2 (like for "KF-" or "GG-")
     if (DashIndex == 2) {
         return Mid(MapName, 3);  // Return everything after position 2
-    } */
+    } 
     
     // Return original if no standard prefix found
     return MapName;
-}
+} */
 
 private final function string GetMyVotingOption(string MapListType) {
     return MapListType;
@@ -60,6 +61,6 @@ private final function int GetFakedPlayers(int MaxPlayers) {
     return MaxPlayers;
 } 
 
-private final function int GetBotCountString(int BotCount) {
+private final function int GetBotCount(int BotCount) {
     return BotCount;
 }
