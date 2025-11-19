@@ -1,10 +1,6 @@
-DISCLAIMER: As it is I can't get this code to compile, but I'm gonna revisit the issue soon because I think it possibly may be as an issue of where I'm compiling it (local game files vs server) as opposed to bad code, but I wont rule that out either.
+Like stated in its description, the purpose of this fork is to extend functionality of the custom server details mod. Specifically adding key variables such as: Map VotingOption, GameType Acronym/Abbreviation and BotCount.
 
-It's also nice to have a shareable version of this while i'm debugging...
-
-
-
-This is a fork of the custom server details extension template so I'll also share their readme below:
+This is a simple fork so attached is their readme below, but i'll edit the package name to reflect my files (remember to rename if you make changes too!):
 
 
 [Custom Server Details]: https://github.com/InsultingPros/CustomServerDetails
@@ -22,7 +18,7 @@ This is a template-example repo to show how to add your own server details, with
 1. Add your *packageName.className*:
 
     ```ini
-    extendedServerDetailsClassName=CustomServerDetailsExtension.CustomServerDetailsExtension
+    extendedServerDetailsClassName=CSD_GTExt.CustomServerDetailsExtension
     ```
 
 2. Add your new variable to `infoBlockKeys`:
@@ -43,5 +39,5 @@ Use [KF Compile Tool](https://github.com/InsultingPros/KFCompileTool) for easy c
 
 ```ini
 EditPackages=CustomServerDetails
-EditPackages=CustomServerDetailsExtension
+EditPackages=CSD_GTExt
 ```
