@@ -1,6 +1,14 @@
-Like stated in its description, the purpose of this fork is to extend functionality of the custom server details mod. Specifically adding key variables such as: Map VotingOption, GameType Acronym/Abbreviation and BotCount.
+Like stated in its description, the purpose of this fork is to extend functionality of the custom server details mod. Specifically adding key variables such as: Map VotingOption, GameType Acronym/Abbreviation.
 
-This is a simple fork so attached is their readme below, but i'll edit the package name to reflect my files (remember to rename if you make changes too!):
+**Do note any of the default server details variables can be accessed without building on this extension, you just need to add their names** (which can be found in Engine.GameReplicationInfo) **to your customserverdetails.ini**
+Examples of interest may be 
+
+`displayedServerDetails=(name="Voting Option",keyTag="^b",valTag="^b",bChangeName=True,newName="Game Mode:")`
+
+& `displayedServerDetails=(name="Mutator",keyTag="^nc",valTag="^o",bChangeName=False,newName="")`
+
+
+This is a simple fork so attached is their readme below, but i'll edit the package name to reflect my files (you might not need to rename in this case if you make changes too but it's good practice!):
 
 
 [Custom Server Details]: https://github.com/InsultingPros/CustomServerDetails
